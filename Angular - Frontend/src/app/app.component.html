@@ -1,0 +1,14 @@
+
+<div *ngFor="let string of greetings">
+<div class="container">
+  <p>{{string}}</p>
+</div>
+</div>
+
+<form #loginForm=ngForm>
+<div>
+  <br>
+  <textarea autocomplete="off" placeholder="Type Your Message..." name="newmessage" [(ngModel)]="newmessage" required></textarea>
+  <button class="btn btn-primary" (click)="sendMessage()" [disabled]="!loginForm.valid">Send</button>
+</div>
+</form>
